@@ -28,12 +28,15 @@ export default function RegisterPage() {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
       router.push("/dashboard");
-    } catch (err: any) {
-      setError(
-        err?.response?.data?.msg ||
-          err?.response?.data?.message ||
-          "Registration failed"
-      );
+    } catch (err: unknown) {
+      let msg = "Registration failed";
+      if (typeof err === "object" && err !== null && "response" in err) {
+        const response = (
+          err as { response?: { data?: { msg?: string; message?: string } } }
+        ).response;
+        msg = response?.data?.msg || response?.data?.message || msg;
+      }
+      setError(msg);
     }
   };
 
