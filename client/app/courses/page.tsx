@@ -1,5 +1,5 @@
-import RecommendedCourse from "@/components/userdashboard/RecommendedCourse";
 import CourseCard from "../../components/CourseCard";
+import UserCourseDetailPage from "./[courseId]/page";
 
 const dummyCourses = [
   {
@@ -79,6 +79,7 @@ export default function CoursesPage() {
           <CourseCard key={course.id} course={course} />
         ))}
       </div>
+      <UserCourseDetailPage />
     </section>
   );
 }

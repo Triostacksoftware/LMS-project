@@ -42,9 +42,11 @@ const coursesData = [
 
 export default function CoursesSection() {
   const [editOpen, setEditOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
   const [courses] = useState(coursesData);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function handleEdit(course: any) {
     setSelectedCourse(course);
     setEditOpen(true);
