@@ -4,7 +4,7 @@ import React, { useState } from "react";
 interface AddCourseModalProps {
   open: boolean;
   onClose: () => void;
-  onSave?: (course: any) => void;
+  onSave?: (course: unknown) => void;
 }
 
 const categories = [
