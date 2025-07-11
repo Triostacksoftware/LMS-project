@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Course {
   id: string;
@@ -41,9 +42,11 @@ const UserDashboardCourseCard: React.FC<UserDashboardCourseCardProps> = ({
                 {course.letter}
               </span>
             )}
-            <img
+            <Image
               src={course.image}
               alt={course.title}
+              width={400}
+              height={200}
               className="w-full h-32 object-cover rounded-lg mb-3"
             />
             <h3 className="text-lg font-semibold text-gray-800 mb-1">
