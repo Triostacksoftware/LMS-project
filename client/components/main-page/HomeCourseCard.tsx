@@ -5,7 +5,7 @@ import Image from "next/image";
 const HomeCourseCard = () => {
   const homeCourses = [
     {
-      id: 1,
+      id: "1",
       category: "Finance",
       level: "Beginner",
       title: "Trading for Beginners",
@@ -18,7 +18,7 @@ const HomeCourseCard = () => {
       price: 49.99,
     },
     {
-      id: 2,
+      id: "2",
       category: "Finance",
       level: "Beginner",
       title: "Trading for Beginners",
@@ -31,7 +31,7 @@ const HomeCourseCard = () => {
       price: 49.99,
     },
     {
-      id: 3,
+      id: "3",
       category: "Finance",
       level: "Beginner",
       title: "Trading for Beginners",
@@ -44,7 +44,7 @@ const HomeCourseCard = () => {
       price: 49.99,
     },
     {
-      id: 4,
+      id: "4",
       category: "Finance",
       level: "Beginner",
       title: "Trading for Beginners",
